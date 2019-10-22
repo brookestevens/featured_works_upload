@@ -1,0 +1,21 @@
+featured_works_upload.render:
+  path: '/featured_works'
+  defaults:
+    _controller: '\Drupal\featured_works_upload\Controller\FeaturedWorksController::renderWork'
+    _title: 'Manage Featured Works'
+  requirements:
+    _permission: 'access content'
+
+featured_works_upload.add:
+  path: '/api/featured_works/add'
+  defaults:
+    _controller: '\Drupal\featured_works_upload\Controller\FeaturedWorksController::addEvent'
+  requirements:
+    _permission: 'access content'
+
+featured_works_upload.update:
+  path: '/api/featured_works/update'
+  defaults:
+    _controller: '\Drupal\featured_works_upload\Controller\FeaturedWorksController::changeStatus'
+  requirements:
+    _permission: 'access content'

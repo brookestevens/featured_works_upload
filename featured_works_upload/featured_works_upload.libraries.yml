@@ -1,0 +1,10 @@
+featured-works:
+  version: 1.x
+  footer: true
+  css:
+    theme:
+      css/featured-works.css: {}
+  js:
+    js/featured-works.js: {}
+  dependencies:
+    - core/jquery

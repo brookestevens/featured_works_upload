@@ -1,0 +1,36 @@
+{{ attach_library('featured_works_upload/featured-works') }}
+
+<div>
+    <p> View details for submitted projects </p>
+    <div>
+        <h3> Sort By: </h3>
+        <button value="pending"  class= "sort-options-button"> Pending </button>
+        <button value="approved" class= "sort-options-button"> Approved </button>
+    </div>
+    <table style="width:100%">
+        <tr>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Project Title</th>
+            <th>Class</th>
+            <th>Details</th>
+            <th>Approve/Deny</th>
+        </tr>
+        {% for i in nodes %}
+            <tr class="col-{{i.status}}">
+                <td> {{i.status ? "Approved" : "Pending"}} </td>
+                <td> {{i.name}} </td>
+                <td> {{i.title}} </td>
+                <td> {{i.class}} </td>
+                <td><a href= "{{baseURL}}node/{{i.nid}}" > Details </a></td>
+                <td> 
+                    {% if i.status == false %}
+                        <button value="{{i.nid}}" id="approve-button"> Approve Project </button> 
+                    {% else %}
+                        Project Approved
+                    {% endif %}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+</div>

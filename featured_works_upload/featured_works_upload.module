@@ -1,0 +1,8 @@
+<?php
+function featured_works_upload_theme($existing, $type, $theme, $path){
+  return [
+    'featured-works-template' => [
+      'variables' => ['baseURL' => NULL, 'nodes'=> NULL],
+    ],
+  ];
+}

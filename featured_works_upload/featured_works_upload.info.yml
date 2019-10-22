@@ -1,0 +1,5 @@
+name: Featured Works Form Uploader
+description: Uploads form data from client to the Featured Works Content Type
+package: CU Atlas Modules
+type: module
+core: 8.x

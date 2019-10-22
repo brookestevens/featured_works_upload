@@ -1,0 +1,15 @@
+.hide{
+    display: none;
+}
+
+table, th{
+    border: 1px solid black;
+}
+
+.col-0{
+    background-color: rgb(230, 94, 94);
+}
+
+.col-1{
+    background-color: rgb(129, 187, 129);
+}
